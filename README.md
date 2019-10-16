@@ -1,6 +1,6 @@
-# core-matrix-gorilla
+# pinkgorilla-ui-core-matrix
 
-[core.matrix](https://github.com/mikera/core.matrix) integration with [Gorilla REPL](http://gorilla-repl.org) that enables us to view core.matrix datasets as HTML tables in Gorilla-repl worksheets.
+[core.matrix](https://github.com/mikera/core.matrix) integration with [Pink Gorilla REPL] that enables us to view core.matrix datasets as HTML tables in PinkGorilla-repl worksheets.
 
 ## Usage
 

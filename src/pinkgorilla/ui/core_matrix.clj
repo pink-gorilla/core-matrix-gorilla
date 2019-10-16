@@ -1,9 +1,11 @@
-(ns core-matrix-gorilla.render
-  (:require [clojure.data.codec.base64 :as b64]
-            [clojure.core.matrix.impl.dataset :as md]
-            [clojure.core.matrix.dataset :as cd]
-            [clojure.core.matrix :as cm]
-            [gorilla-renderable.core :as render]))
+(ns pinkgorilla.ui.core-matrix
+  (:require 
+   [clojure.data.codec.base64 :as b64]
+   [clojure.core.matrix.impl.dataset :as md]
+   [clojure.core.matrix.dataset :as cd]
+   [clojure.core.matrix :as cm]
+   [gorilla-renderable.core :as render] ;pink-gorilla Renderable
+   ))
 
 (defn list-like
   "util function used in render"
@@ -37,6 +39,10 @@
 
 ;;Created another type just to pass parameters such as num rows and num columns to mview function
 (defrecord AbridgedMatrixView  [contents opts])
+  
+(extend-type AbridgedMatrixView
+    render/Renderable
+    (render [self & opts] (renderfn (:contents self) (:opts self))))
 
 (defn mview
   "view the dataset. Accepts an optional map with :nrows and :ncols keys for 
@@ -44,10 +50,8 @@
   ([^clojure.core.matrix.impl.dataset.DataSet dset] (mview dset {}))
   ([^clojure.core.matrix.impl.dataset.DataSet dset {:keys [nrows ncols] :or {nrows 10 ncols 10} :as opts}]
    (AbridgedMatrixView. dset opts)))
-  
-(extend-type AbridgedMatrixView
-    render/Renderable
-    (render [self & opts] (renderfn (:contents self) (:opts self))))
+
+
 
 ;extend dataset type to show in gorilla-repl interface
 (extend-type clojure.core.matrix.impl.dataset.DataSet
