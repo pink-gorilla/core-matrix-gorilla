@@ -1,6 +1,8 @@
 # pinkgorilla-ui-core-matrix
 
-[core.matrix](https://github.com/mikera/core.matrix) integration with [Pink Gorilla REPL] that enables us to view core.matrix datasets as HTML tables in PinkGorilla-repl worksheets.
+##History
+- This repo was forked from [core.matrix](https://github.com/mikera/core.matrix) integration with [Pink Gorilla REPL] that enables us to view core.matrix datasets as HTML tables in PinkGorilla-repl worksheets.
+- The fork was necessary to use pink gorilla renderable.
 
 ## Usage
 
