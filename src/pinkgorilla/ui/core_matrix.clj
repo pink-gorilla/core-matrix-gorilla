@@ -4,7 +4,7 @@
    [clojure.core.matrix.impl.dataset :as md]
    [clojure.core.matrix.dataset :as cd]
    [clojure.core.matrix :as cm]
-   [gorilla-renderable.core :as render] ;pink-gorilla Renderable
+   [pinkgorilla.ui.gorilla-renderable :as render] ;pink-gorilla Renderable
    ))
 
 (defn list-like
