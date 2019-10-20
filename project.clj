@@ -1,4 +1,4 @@
-(defproject pinkgorilla-ui-core-matrix "0.1.2"
+(defproject pinkgorilla-ui-core-matrix "0.1.3"
   :description "PinkGorilla REPL integration for core.matrix datasets"
   :url "https://github.com/pink-gorilla/core-matrix-gorilla"
   :license {:name "MIT"}
@@ -9,5 +9,5 @@
   [[org.clojure/clojure "1.9.0-alpha14"]
    [net.mikera/core.matrix "0.56.0"]
    [org.clojure/data.codec "0.1.0"]
-   [pinkgorilla.ui.gorilla-renderable "2.0.7"] ;PinkGorilla Renderable
+   [pinkgorilla.ui.gorilla-renderable "2.0.9"];PinkGorilla Renderable
    ])
